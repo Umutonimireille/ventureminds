@@ -46,7 +46,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/40 via-transparent to-brand-black pointer-events-none" />
 
         <div className="relative z-10 container-max px-4 sm:px-6 lg:px-8 text-center pt-24">
-          <motion.img
+          {/* <motion.img
             src={logo}
             alt="Venture Minds"
             className="mx-auto mb-8 object-contain"
@@ -54,7 +54,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             style={{ maxHeight: '220px' }}
-          />
+          /> */}
 
           <motion.p
             className="text-xs md:text-sm tracking-[0.3em] text-white/70 mb-6 uppercase"
