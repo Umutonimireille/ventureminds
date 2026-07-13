@@ -86,12 +86,12 @@ export default function Home() {
 
             {/* 3D brand mark on the right */}
             <motion.div
-              className="hidden lg:flex items-center justify-center h-screen lg:h-full lg:col-span-3"
+              className="hidden lg:flex items-center justify-center lg:col-span-3 h-96 lg:h-screen"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute inset-0 w-full h-full">
+              <div className="w-full h-full">
                 <Suspense fallback={null}>
                   <Hero3D />
                 </Suspense>
