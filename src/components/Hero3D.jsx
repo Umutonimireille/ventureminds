@@ -8,7 +8,7 @@ const PEOPLE_COLORS = ['#1E7FBF', '#2E9E44', '#F2932E', '#C0392B', '#3A3A3A']
 const GOLD = '#F2B807'
 
 // Build a filled, extruded 5-pointed star that echoes the logo mark.
-function makeStarGeometry(outer = 3.5, inner = 1.62, points = 5) {
+function makeStarGeometry(outer = 1.8, inner = 0.82, points = 5) {
   const shape = new THREE.Shape()
   const step = Math.PI / points
   for (let i = 0; i < points * 2; i++) {
@@ -20,10 +20,10 @@ function makeStarGeometry(outer = 3.5, inner = 1.62, points = 5) {
   }
   shape.closePath()
   const geo = new THREE.ExtrudeGeometry(shape, {
-    depth: 0.8,
+    depth: 0.4,
     bevelEnabled: true,
-    bevelThickness: 0.2,
-    bevelSize: 0.15,
+    bevelThickness: 0.1,
+    bevelSize: 0.08,
     bevelSegments: 4,
   })
   geo.center()
@@ -56,7 +56,7 @@ function Star() {
 }
 
 // A single orbiting sphere — one of the five figures encircling the star.
-function OrbitingFigure({ color, index, total, radius = 6.5, size = 0.65 }) {
+function OrbitingFigure({ color, index, total, radius = 4.0, size = 0.4 }) {
   const ref = useRef()
   const baseAngle = (index / total) * Math.PI * 2
 
@@ -65,7 +65,7 @@ function OrbitingFigure({ color, index, total, radius = 6.5, size = 0.65 }) {
     const t = state.clock.elapsedTime * 0.4 + baseAngle
     ref.current.position.x = Math.cos(t) * radius
     ref.current.position.z = Math.sin(t) * radius
-    ref.current.position.y = Math.sin(t * 1.3) * 1.2
+    ref.current.position.y = Math.sin(t * 1.3) * 0.8
   })
 
   return (
@@ -83,7 +83,7 @@ function OrbitingFigure({ color, index, total, radius = 6.5, size = 0.65 }) {
 }
 
 // Secondary smaller orbiting figures for visual interest
-function SmallOrbitingFigure({ color, index, total, radius = 3.2, size = 0.3 }) {
+function SmallOrbitingFigure({ color, index, total, radius = 2.0, size = 0.18 }) {
   const ref = useRef()
   const baseAngle = (index / total) * Math.PI * 2 + Math.PI / total
 
@@ -92,7 +92,7 @@ function SmallOrbitingFigure({ color, index, total, radius = 3.2, size = 0.3 }) 
     const t = state.clock.elapsedTime * 0.55 + baseAngle
     ref.current.position.x = Math.cos(t) * radius
     ref.current.position.z = Math.sin(t) * radius
-    ref.current.position.y = Math.sin(t * 0.8) * 0.8
+    ref.current.position.y = Math.sin(t * 0.8) * 0.5
   })
 
   return (
@@ -110,14 +110,14 @@ function SmallOrbitingFigure({ color, index, total, radius = 3.2, size = 0.3 }) 
 }
 
 // Small drifting specks for depth.
-function Dust({ count = 120 }) {
+function Dust({ count = 80 }) {
   const ref = useRef()
   const positions = useMemo(() => {
     const arr = new Float32Array(count * 3)
     for (let i = 0; i < count; i++) {
-      arr[i * 3] = (Math.sin(i * 12.9898) * 43758.5453) % 1 * 36 - 18
-      arr[i * 3 + 1] = (Math.sin(i * 78.233) * 43758.5453) % 1 * 22 - 11
-      arr[i * 3 + 2] = (Math.sin(i * 37.719) * 43758.5453) % 1 * 18 - 13.5
+      arr[i * 3] = (Math.sin(i * 12.9898) * 43758.5453) % 1 * 20 - 10
+      arr[i * 3 + 1] = (Math.sin(i * 78.233) * 43758.5453) % 1 * 12 - 6
+      arr[i * 3 + 2] = (Math.sin(i * 37.719) * 43758.5453) % 1 * 10 - 7.5
     }
     return arr
   }, [count])
@@ -178,9 +178,9 @@ function Scene() {
 
 export default function Hero3D({ className = '' }) {
   return (
-    <div className={`absolute inset-0 ${className}`}>
+    <div className={`w-full h-full ${className}`}>
       <Canvas
-        camera={{ position: [0, 0.5, 14], fov: 45 }}
+        camera={{ position: [0, 0, 8.5], fov: 50 }}
         dpr={[1, 1.8]}
         gl={{ antialias: true, alpha: true }}
       >
