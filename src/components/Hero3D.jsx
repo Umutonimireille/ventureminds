@@ -8,7 +8,7 @@ const PEOPLE_COLORS = ['#1E7FBF', '#2E9E44', '#F2932E', '#C0392B', '#3A3A3A']
 const GOLD = '#F2B807'
 
 // Build a filled, extruded 5-pointed star that echoes the logo mark.
-function makeStarGeometry(outer = 1.35, inner = 0.62, points = 5) {
+function makeStarGeometry(outer = 2.0, inner = 0.92, points = 5) {
   const shape = new THREE.Shape()
   const step = Math.PI / points
   for (let i = 0; i < points * 2; i++) {
@@ -20,10 +20,10 @@ function makeStarGeometry(outer = 1.35, inner = 0.62, points = 5) {
   }
   shape.closePath()
   const geo = new THREE.ExtrudeGeometry(shape, {
-    depth: 0.35,
+    depth: 0.5,
     bevelEnabled: true,
-    bevelThickness: 0.12,
-    bevelSize: 0.09,
+    bevelThickness: 0.15,
+    bevelSize: 0.12,
     bevelSegments: 4,
   })
   geo.center()
@@ -58,7 +58,7 @@ function Star() {
 // A single orbiting sphere — one of the five figures encircling the star.
 function OrbitingFigure({ color, index, total }) {
   const ref = useRef()
-  const radius = 2.7
+  const radius = 4.0
   const baseAngle = (index / total) * Math.PI * 2
 
   useFrame((state) => {
@@ -66,12 +66,12 @@ function OrbitingFigure({ color, index, total }) {
     const t = state.clock.elapsedTime * 0.4 + baseAngle
     ref.current.position.x = Math.cos(t) * radius
     ref.current.position.z = Math.sin(t) * radius
-    ref.current.position.y = Math.sin(t * 1.3) * 0.5
+    ref.current.position.y = Math.sin(t * 1.3) * 0.75
   })
 
   return (
     <mesh ref={ref}>
-      <sphereGeometry args={[0.28, 32, 32]} />
+      <sphereGeometry args={[0.42, 32, 32]} />
       <meshStandardMaterial
         color={color}
         metalness={0.2}
@@ -84,14 +84,14 @@ function OrbitingFigure({ color, index, total }) {
 }
 
 // Small drifting specks for depth.
-function Dust({ count = 60 }) {
+function Dust({ count = 80 }) {
   const ref = useRef()
   const positions = useMemo(() => {
     const arr = new Float32Array(count * 3)
     for (let i = 0; i < count; i++) {
-      arr[i * 3] = (Math.sin(i * 12.9898) * 43758.5453) % 1 * 16 - 8
-      arr[i * 3 + 1] = (Math.sin(i * 78.233) * 43758.5453) % 1 * 10 - 5
-      arr[i * 3 + 2] = (Math.sin(i * 37.719) * 43758.5453) % 1 * 8 - 6
+      arr[i * 3] = (Math.sin(i * 12.9898) * 43758.5453) % 1 * 24 - 12
+      arr[i * 3 + 1] = (Math.sin(i * 78.233) * 43758.5453) % 1 * 15 - 7.5
+      arr[i * 3 + 2] = (Math.sin(i * 37.719) * 43758.5453) % 1 * 12 - 9
     }
     return arr
   }, [count])
@@ -132,7 +132,7 @@ export default function Hero3D({ className = '' }) {
   return (
     <div className={`absolute inset-0 ${className}`}>
       <Canvas
-        camera={{ position: [0, 0, 6.5], fov: 50 }}
+        camera={{ position: [0, 0, 9.5], fov: 50 }}
         dpr={[1, 1.8]}
         gl={{ antialias: true, alpha: true }}
       >

@@ -91,7 +91,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative w-full h-96">
+              <div className="relative w-full h-full min-h-96">
                 <Suspense fallback={null}>
                   <Hero3D />
                 </Suspense>
