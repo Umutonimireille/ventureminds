@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-black text-brand-white font-sans antialiased;
+    cursor: none;
+  }
+
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+
+  @media (max-width: 768px) {
+    body, a, button, [role="button"], input, textarea, select {
+      cursor: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-orange {
+    @apply text-brand-orange;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}

@@ -1,0 +1,51 @@
+export const teamMembers = [
+  {
+    id: 1,
+    name: 'Alexandra N.',
+    role: 'Team Lead',
+    bio: 'Passionate about social entrepreneurship and community-driven innovation. Leads Venture Minds strategy and stakeholder engagement.',
+    // SWAP: Replace null with actual photo path, e.g. '/team/alexandra.jpg'
+    photo: null,
+    color: '#1E7FBF',
+  },
+  {
+    id: 2,
+    name: 'Jean-Pierre M.',
+    role: 'Research Lead',
+    bio: 'Specializes in field research and data analysis. Ensures our solutions are grounded in real community needs.',
+    photo: null,
+    color: '#2E9E44',
+  },
+  {
+    id: 3,
+    name: 'Grace U.',
+    role: 'Design & Prototyping',
+    bio: 'Transforms ideas into tangible prototypes. Brings creative design thinking to every project we tackle.',
+    photo: null,
+    color: '#F2932E',
+  },
+  {
+    id: 4,
+    name: 'David K.',
+    role: 'Impact Analyst',
+    bio: 'Measures and reports on our community impact. Passionate about evidence-based social change.',
+    photo: null,
+    color: '#C0392B',
+  },
+  {
+    id: 5,
+    name: 'Marie C.',
+    role: 'Communications',
+    bio: 'Tells the Venture Minds story to the world. Manages outreach, social media, and community partnerships.',
+    photo: null,
+    color: '#F2B807',
+  },
+  {
+    id: 6,
+    name: 'Patrick H.',
+    role: 'Technology Lead',
+    bio: 'Builds digital tools and platforms that amplify our solutions. Bridges tech and community needs.',
+    photo: null,
+    color: '#3A3A3A',
+  },
+]
