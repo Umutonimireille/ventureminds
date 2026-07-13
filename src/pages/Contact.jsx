@@ -32,7 +32,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="section-padding pt-0">
+      <section className="section-padding pt-0" style={{ backgroundColor: 'rgba(30, 127, 191, 0.04)' }}>
         <div className="container-max">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}

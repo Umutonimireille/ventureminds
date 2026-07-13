@@ -26,8 +26,11 @@ export default function Navbar() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-brand-black/90 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-transparent'
+        scrolled ? 'backdrop-blur-md shadow-lg shadow-brand-blue/10' : 'bg-transparent'
       }`}
+      style={{
+        backgroundColor: scrolled ? 'rgba(13, 26, 36, 0.85)' : 'transparent'
+      }}
       animate={{ paddingTop: scrolled ? 8 : 16, paddingBottom: scrolled ? 8 : 16 }}
       transition={{ duration: 0.3 }}
     >

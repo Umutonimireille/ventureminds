@@ -26,7 +26,7 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="section-padding pt-0">
+      <section className="section-padding pt-0" style={{ backgroundColor: 'rgba(242, 147, 46, 0.04)' }}>
         <div className="container-max">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (

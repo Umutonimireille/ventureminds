@@ -72,7 +72,7 @@ export default function Impact() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-brand-gray/10">
+      <section className="section-padding" style={{ backgroundColor: 'rgba(46, 158, 68, 0.05)' }}>
         <div className="container-max">
           <SectionHeading
             title="Community Voices"

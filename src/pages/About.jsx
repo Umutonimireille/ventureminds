@@ -59,7 +59,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-brand-gray/10">
+      <section className="section-padding" style={{ backgroundColor: 'rgba(46, 158, 68, 0.06)' }}>
         <div className="container-max">
           <SectionHeading
             title="Our eLab Journey"
