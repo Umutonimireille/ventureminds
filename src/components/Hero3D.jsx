@@ -56,7 +56,7 @@ function Star() {
 }
 
 // A single orbiting sphere — one of the five figures encircling the star.
-function OrbitingFigure({ color, index, total, radius = 4.0, size = 0.4 }) {
+function OrbitingFigure({ color, index, total, radius = 2.5, size = 0.25 }) {
   const ref = useRef()
   const baseAngle = (index / total) * Math.PI * 2
 
@@ -65,7 +65,7 @@ function OrbitingFigure({ color, index, total, radius = 4.0, size = 0.4 }) {
     const t = state.clock.elapsedTime * 0.4 + baseAngle
     ref.current.position.x = Math.cos(t) * radius
     ref.current.position.z = Math.sin(t) * radius
-    ref.current.position.y = Math.sin(t * 1.3) * 0.8
+    ref.current.position.y = Math.sin(t * 1.3) * 0.5
   })
 
   return (
@@ -83,7 +83,7 @@ function OrbitingFigure({ color, index, total, radius = 4.0, size = 0.4 }) {
 }
 
 // Secondary smaller orbiting figures for visual interest
-function SmallOrbitingFigure({ color, index, total, radius = 2.0, size = 0.18 }) {
+function SmallOrbitingFigure({ color, index, total, radius = 1.2, size = 0.12 }) {
   const ref = useRef()
   const baseAngle = (index / total) * Math.PI * 2 + Math.PI / total
 
@@ -92,7 +92,7 @@ function SmallOrbitingFigure({ color, index, total, radius = 2.0, size = 0.18 })
     const t = state.clock.elapsedTime * 0.55 + baseAngle
     ref.current.position.x = Math.cos(t) * radius
     ref.current.position.z = Math.sin(t) * radius
-    ref.current.position.y = Math.sin(t * 0.8) * 0.5
+    ref.current.position.y = Math.sin(t * 0.8) * 0.3
   })
 
   return (
