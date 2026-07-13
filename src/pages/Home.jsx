@@ -37,10 +37,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-black/20 via-transparent to-brand-black/40 pointer-events-none" />
 
         <div className="relative z-10 container-max px-4 sm:px-6 lg:px-8 h-screen flex items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center w-full">
             {/* Text on the left */}
             <motion.div
-              className="text-left lg:pr-8"
+              className="text-left lg:pr-8 lg:col-span-2"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -86,12 +86,12 @@ export default function Home() {
 
             {/* 3D brand mark on the right */}
             <motion.div
-              className="hidden lg:flex items-center justify-center"
+              className="hidden lg:flex items-center justify-center h-screen lg:h-full lg:col-span-3"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="relative w-full h-full min-h-96">
+              <div className="absolute inset-0 w-full h-full">
                 <Suspense fallback={null}>
                   <Hero3D />
                 </Suspense>
