@@ -3,10 +3,9 @@ import { motion } from 'framer-motion'
 import { useCursor } from '../context/CursorContext'
 import ParticleBackground from '../components/ParticleBackground'
 import SectionHeading from '../components/SectionHeading'
-import StatCounter from '../components/StatCounter'
 import ImageGallery from '../components/ImageGallery'
 import Button from '../components/Button'
-import { impactStats, testimonials, impactGallery, featuredStory } from '../data/impact'
+import { testimonials, impactGallery, featuredStory } from '../data/impact'
 
 export default function Impact() {
   const { setCursorColor } = useCursor()
@@ -29,18 +28,12 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="section-padding pt-0">
-        <div className="container-max">
-          <StatCounter stats={impactStats} />
-        </div>
-      </section>
-
       {/* Featured HELP-LAB story */}
       <section className="section-padding pt-0">
         <div className="container-max">
           <motion.div
-            className="grid md:grid-cols-2 gap-8 items-center rounded-3xl overflow-hidden bg-brand-gray/20 border border-white/10"
+            className="grid md:grid-cols-2 gap-8 items-center rounded-3xl overflow-hidden border"
+            style={{ backgroundColor: 'rgba(242, 147, 46, 0.05)', borderColor: 'rgba(242, 147, 46, 0.2)' }}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
@@ -92,7 +85,8 @@ export default function Impact() {
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.id}
-                className="p-8 rounded-2xl bg-brand-gray/20 border border-white/10 relative"
+                className="p-8 rounded-2xl border relative"
+                style={{ backgroundColor: `rgba(${t.color === '#2E9E44' ? '46, 158, 68' : t.color === '#F2932E' ? '242, 147, 46' : '30, 127, 191'}, 0.06)`, borderColor: `${t.color}30` }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

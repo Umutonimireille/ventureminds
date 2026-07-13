@@ -28,7 +28,7 @@ export default function TeamCard({ member, index }) {
     >
       <div className="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:[transform:rotateY(180deg)]">
         {/* Front */}
-        <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border border-white/10 bg-brand-gray/20">
+        <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border" style={{ borderColor: `${member.color}25`, backgroundColor: `${member.color}08` }}>
           {member.photo ? (
             <img
               src={member.photo}
@@ -52,7 +52,7 @@ export default function TeamCard({ member, index }) {
         {/* Back */}
         <div
           className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden border p-6 flex flex-col items-center justify-center text-center [transform:rotateY(180deg)]"
-          style={{ borderColor: `${member.color}40`, backgroundColor: `${member.color}10` }}
+          style={{ borderColor: `${member.color}40`, backgroundColor: `${member.color}12` }}
         >
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mb-4"

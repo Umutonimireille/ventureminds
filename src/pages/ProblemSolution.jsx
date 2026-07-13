@@ -58,7 +58,8 @@ export default function ProblemSolution() {
               {problem.points.map((p, i) => (
                 <motion.div
                   key={p.text}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-brand-gray/20 border border-white/10"
+                  className="flex items-start gap-4 p-6 rounded-2xl border"
+                  style={{ backgroundColor: 'rgba(192, 57, 43, 0.06)', borderColor: 'rgba(192, 57, 43, 0.25)' }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -94,7 +95,8 @@ export default function ProblemSolution() {
       <section className="section-padding pt-0">
         <div className="container-max">
           <motion.div
-            className="p-8 md:p-12 rounded-3xl border border-brand-green/30 bg-brand-green/5"
+            className="p-8 md:p-12 rounded-3xl border"
+            style={{ backgroundColor: 'rgba(46, 158, 68, 0.08)', borderColor: 'rgba(46, 158, 68, 0.3)' }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
@@ -133,7 +135,8 @@ export default function ProblemSolution() {
               {solution.features.map((f, i) => (
                 <motion.div
                   key={f.title}
-                  className="p-7 rounded-2xl bg-brand-gray/20 border border-white/10"
+                  className="p-7 rounded-2xl border"
+                  style={{ backgroundColor: `${f.color}08`, borderColor: `${f.color}25` }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -152,7 +155,8 @@ export default function ProblemSolution() {
 
           {/* Goal */}
           <motion.div
-            className="mt-12 text-center p-10 rounded-3xl bg-gradient-to-br from-brand-blue/10 via-brand-gray/10 to-brand-green/10 border border-white/10"
+            className="mt-12 text-center p-10 rounded-3xl border"
+            style={{ backgroundColor: 'rgba(30, 127, 191, 0.07)', borderColor: 'rgba(30, 127, 191, 0.2)' }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
