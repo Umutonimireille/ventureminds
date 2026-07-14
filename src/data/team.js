@@ -2,7 +2,7 @@ import mireillePhoto from '../assets/team/mireille.jpg'
 import kingPhoto from '../assets/team/king.jpeg'
 import agnesPhoto from '../assets/team/agnes.PNG'
 import fidelisPhoto from '../assets/team/fidelis.jpeg'
-import joanPhoto from "../assets/team/joan.jpEg"
+import joanPhoto from "../assets/team/joan.jpeg"
 import brunoPhoto from "../assets/team/bruno.jpeg"
 
 export const teamMembers = [
