@@ -63,8 +63,8 @@ export default function Contact() {
                 <div className="space-y-4">
                   {[
                     { label: 'Location', value: 'African Leadership University, Kigali, Rwanda', icon: '📍', color: '#1E7FBF' },
-                    { label: 'Email', value: 'ventureminds@alu.edu', icon: '✉️', href: 'mailto:ventureminds@alu.edu', color: '#2E9E44' },
-                    { label: 'Program', value: 'eLab — Entrepreneurship Lab', icon: '🚀', color: '#F2932E' },
+                    { label: 'Email', value: 'ventureminds@gmail.com', icon: '✉️', href: 'mailto:ventureminds@gmail.com', color: '#2E9E44' },
+                    { label: 'Program', value: 'eLab  Entrepreneurship Lab', icon: '', color: '#F2932E' },
                   ].map((item) => (
                     <div key={item.label} className="flex items-start gap-4 p-4 rounded-xl border" style={{ backgroundColor: `${item.color}08`, borderColor: `${item.color}25` }}>
                       <span className="text-xl">{item.icon}</span>

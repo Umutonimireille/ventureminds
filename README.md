@@ -1,6 +1,6 @@
 # Venture Minds
 
-A modern, dynamic multi-page website for **Venture Minds** — a student think-tank from African Leadership University in Rwanda, showcasing the eLab entrepreneurship lab journey.
+A modern, dynamic multi-page website for **Venture Minds**  a student think-tank from African Leadership University in Rwanda, showcasing the eLab entrepreneurship lab journey.
 
 ## Tech Stack
 
@@ -67,15 +67,15 @@ All content is stored in `src/data/` files. Look for `// SWAP:` comments indicat
 
 ## Brand Colors
 
-| Color         | Hex       | Usage              |
-|---------------|-----------|--------------------|
-| Black         | `#0A0A0A` | Background         |
-| Blue          | `#1E7FBF` | Home section       |
-| Green         | `#2E9E44` | About section      |
-| Orange        | `#F2932E` | Team, highlights   |
-| Red           | `#C0392B` | Challenges         |
-| Charcoal Gray | `#3A3A3A` | Solutions          |
-| Gold          | `#F2B807` | Impact section     |
+| Color         | Hex         | Usage            |
+| ------------- | ----------- | ---------------- |
+| Black         | `#0A0A0A` | Background       |
+| Blue          | `#1E7FBF` | Home section     |
+| Green         | `#2E9E44` | About section    |
+| Orange        | `#F2932E` | Team, highlights |
+| Red           | `#C0392B` | Challenges       |
+| Charcoal Gray | `#3A3A3A` | Solutions        |
+| Gold          | `#F2B807` | Impact section   |
 
 ## Build
 

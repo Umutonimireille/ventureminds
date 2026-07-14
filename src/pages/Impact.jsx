@@ -22,7 +22,7 @@ export default function Impact() {
           <SectionHeading
             title="Our Impact"
             highlightWord="Impact"
-            subtitle="Measurable change in Rwandan communities — the outcomes of our eLab journey."
+            subtitle="Measurable change in Rwandan communities the outcomes of our eLab journey."
             color="#F2B807"
           />
         </div>

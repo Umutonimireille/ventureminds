@@ -64,7 +64,7 @@ export default function About() {
           <SectionHeading
             title="Our eLab Journey"
             highlightWord="eLab"
-            subtitle="From formation to impact — the milestones that shaped Venture Minds."
+            subtitle="From formation to impact the milestones that shaped Venture Minds."
             color="#F2B807"
           />
           <Timeline events={timelineEvents} />
@@ -75,8 +75,8 @@ export default function About() {
       <section className="section-padding">
         <div className="container-max">
           <SectionHeading
-            title="Workshops & Sessions"
-            highlightWord="Sessions"
+            title="OUR WORK & "
+            highlightWord="GALLERY"
             subtitle="Moments from our eLab workshops, brainstorming sessions, and community visits."
             color="#2E9E44"
           />

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { CursorProvider } from './context/CursorContext'
 import CustomCursor from './components/CustomCursor'
 import Navbar from './components/Navbar'
@@ -40,12 +40,32 @@ function ScrollToTop() {
   return null
 }
 
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 120,
+    damping: 30,
+    restDelta: 0.001,
+  })
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-[3px] origin-left z-[60]"
+      style={{
+        scaleX,
+        background:
+          'linear-gradient(90deg, #1E7FBF, #2E9E44, #F2932E, #F2B807)',
+      }}
+    />
+  )
+}
+
 export default function App() {
   const location = useLocation()
 
   return (
     <CursorProvider>
       <CustomCursor />
+      <ScrollProgress />
       <ScrollToTop />
       <Navbar />
       <main className="min-h-screen">

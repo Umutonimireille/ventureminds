@@ -22,7 +22,7 @@ export default function ProblemSolution() {
           <SectionHeading
             title="Problem & Solution"
             highlightWord="Solution"
-            subtitle="The challenge facing Rwanda's creatives — and how Urumuri Hub answers it."
+            subtitle="The challenge facing Rwanda's creatives  and how Urumuri Hub answers it."
             color="#F2932E"
           />
         </div>
@@ -37,15 +37,15 @@ export default function ProblemSolution() {
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-xs font-bold tracking-widest px-3 py-1 rounded-full bg-brand-red/20 text-brand-red">
+            <span className="text-xs font-bold tracking-widest px-3 py-1 rounded-full bg-white/10 text-white/70">
               THE PROBLEM
             </span>
 
-            <div className="mt-6 p-8 md:p-10 rounded-3xl border" style={{ backgroundColor: 'rgba(192, 57, 43, 0.08)', borderColor: 'rgba(192, 57, 43, 0.3)' }}>
-              <p className="text-xs uppercase tracking-widest text-brand-red/80 mb-3">
+            <div className="mt-6 p-8 md:p-10 rounded-3xl border border-white/10 bg-white/[0.03]">
+              <p className="text-xs uppercase tracking-widest text-white/40 mb-3">
                 According to the {problem.source}
               </p>
-              <h3 className="text-2xl md:text-3xl font-bold mb-5 leading-snug">
+              <h3 className="text-2xl md:text-3xl font-bold mb-5 leading-snug text-white">
                 “{problem.lead}”
               </h3>
               <p className="text-white/70 text-sm md:text-base leading-relaxed">
@@ -53,29 +53,30 @@ export default function ProblemSolution() {
               </p>
             </div>
 
-            {/* Problem breakdown */}
+            {/* Problem breakdown — restrained, numbered, no icons */}
             <div className="grid sm:grid-cols-2 gap-4 mt-6">
               {problem.points.map((p, i) => (
                 <motion.div
                   key={p.text}
-                  className="flex items-start gap-4 p-6 rounded-2xl border"
-                  style={{ backgroundColor: 'rgba(192, 57, 43, 0.06)', borderColor: 'rgba(192, 57, 43, 0.25)' }}
+                  className="flex items-start gap-4 p-6 rounded-2xl border border-white/10 bg-white/[0.03]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
-                  whileHover={{ y: -3 }}
+                  whileHover={{ y: -3, borderColor: 'rgba(255,255,255,0.2)' }}
                 >
-                  <span className="text-2xl shrink-0">{p.icon}</span>
-                  <p className="text-white/75 text-sm leading-relaxed">{p.text}</p>
+                  <span className="text-sm font-bold text-white/30 tabular-nums shrink-0 pt-0.5">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <p className="text-white/75 text-sm md:text-base leading-relaxed">{p.text}</p>
                 </motion.div>
               ))}
             </div>
 
-            {/* Guiding question */}
+            {/* Guiding question — the single accent in this section */}
             <motion.div
               className="mt-10 p-8 md:p-10 rounded-3xl border-l-4"
-              style={{ borderLeftColor: '#F2B807', backgroundColor: 'rgba(242, 184, 7, 0.08)' }}
+              style={{ borderLeftColor: '#F2B807', backgroundColor: 'rgba(242, 184, 7, 0.06)' }}
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

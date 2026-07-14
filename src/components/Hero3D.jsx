@@ -151,13 +151,13 @@ function Scene() {
       <Star />
       {/* Large primary orbiting figures */}
       {PEOPLE_COLORS.map((color, i) => (
-        <OrbitingFigure 
-          key={`primary-${color}-${i}`} 
-          color={color} 
-          index={i} 
+        <OrbitingFigure
+          key={`primary-${color}-${i}`}
+          color={color}
+          index={i}
           total={PEOPLE_COLORS.length}
-          radius={6.5}
-          size={0.65}
+          radius={4.5}
+          size={0.32}
         />
       ))}
       {/* Small secondary orbiting figures */}

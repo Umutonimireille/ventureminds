@@ -20,7 +20,7 @@ export default function Team() {
           <SectionHeading
             title="Our Team"
             highlightWord="Team"
-            subtitle="The passionate minds behind Venture Minds — students, innovators, and changemakers from ALU Rwanda."
+            subtitle="The passionate minds behind Venture Minds students, innovators, and changemakers from ALU Rwanda."
             color="#F2932E"
           />
         </div>
