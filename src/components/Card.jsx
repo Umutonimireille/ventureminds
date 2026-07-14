@@ -13,7 +13,8 @@ export default function Card({
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-2xl bg-brand-gray/20 border border-white/10 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border ${className}`}
+      style={{ backgroundColor: `${color}08`, borderColor: `${color}25` }}
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: 30 }}
       viewport={{ once: true, margin: '-50px' }}

@@ -2,8 +2,7 @@ export const navLinks = [
   { name: 'Home', path: '/', color: '#1E7FBF' },
   { name: 'About', path: '/about', color: '#2E9E44' },
   { name: 'Team', path: '/team', color: '#F2932E' },
-  { name: 'Challenges', path: '/challenges', color: '#C0392B' },
-  { name: 'Solutions', path: '/solutions', color: '#3A3A3A' },
+  { name: 'Solutions', path: '/solutions', color: '#F2932E' },
   { name: 'Impact', path: '/impact', color: '#F2B807' },
   { name: 'Contact', path: '/contact', color: '#1E7FBF' },
 ]

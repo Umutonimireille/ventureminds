@@ -5,7 +5,7 @@ import logo from '../assets/logo.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-gray/30 border-t border-white/10">
+    <footer className="border-t" style={{ backgroundColor: 'rgba(13, 26, 36, 0.8)', borderColor: 'rgba(30, 127, 191, 0.2)' }}>
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="flex flex-col items-start gap-4">

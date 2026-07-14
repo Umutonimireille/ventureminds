@@ -35,13 +35,14 @@ export default function About() {
         <div className="container-max">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: 'Our Story', content: aboutContent.story, color: '#1E7FBF' },
-              { title: 'Our Mission', content: aboutContent.mission, color: '#2E9E44' },
-              { title: 'Our Vision', content: aboutContent.vision, color: '#F2932E' },
+              { title: 'Our Story', content: aboutContent.story, color: '#1E7FBF', bgColor: 'rgba(30, 127, 191, 0.07)' },
+              { title: 'Our Mission', content: aboutContent.mission, color: '#2E9E44', bgColor: 'rgba(46, 158, 68, 0.07)' },
+              { title: 'Our Vision', content: aboutContent.vision, color: '#F2932E', bgColor: 'rgba(242, 147, 46, 0.07)' },
             ].map((block, i) => (
               <motion.div
                 key={block.title}
-                className="p-8 rounded-2xl bg-brand-gray/20 border border-white/10"
+                className="p-8 rounded-2xl border"
+                style={{ backgroundColor: block.bgColor, borderColor: `${block.color}25` }}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -58,7 +59,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-brand-gray/10">
+      <section className="section-padding" style={{ backgroundColor: 'rgba(46, 158, 68, 0.06)' }}>
         <div className="container-max">
           <SectionHeading
             title="Our eLab Journey"
